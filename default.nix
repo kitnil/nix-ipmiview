@@ -1,4 +1,4 @@
-{ stdenv, bash, steam-run }:
+{ stdenv, fetchurl, bash, steam-run }:
 
 stdenv.mkDerivation rec {
   version = "2.14.0";
