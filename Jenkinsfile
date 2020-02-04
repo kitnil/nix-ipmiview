@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Build derivation") {
             steps {
-                nixSh cmd: "nix-build --no-out-link"
+                nixSh cmd: 'nix-build -E "with (import <nixpkgs> {}); with pkgs; callPackage ./default.nix {}"'
             }
         }
     }

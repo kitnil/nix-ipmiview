@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/{bin,share/ipmiview}
-    cp --recursive $src/* $out/share/ipmiview
+    cp --recursive ./ $out/share/ipmiview
 
     cat > ipmiview <<EOF
     #!${bash}/bin/bash
